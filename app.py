@@ -115,7 +115,7 @@ def extract_object(image: Image.Image) -> Image.Image:
     return image_rgba
 
 
-@app.post("/process-image/")
+@app.post("/process")
 async def process_image(file: UploadFile = File(...)):
     logger.info("Received image processing request")
     try:
